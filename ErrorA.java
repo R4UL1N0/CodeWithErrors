@@ -9,9 +9,13 @@ public class ErrorA {
         names.add("Jane");
         names.add("Mike");
 
-        for (int i = 0; i <= names.size(); i++) {
-            String name = names.get(i);
-            System.out.println("Name: " + name);
+        try {
+            for (int i = 0; i <= names.size(); i++) {
+                String name = names.get(i);
+                System.out.println("Name: " + name);
+            }
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Seu index não está de acordo com a realidade.");
         }
     }
 }
